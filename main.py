@@ -12,9 +12,6 @@ import torch.nn.functional as F
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-import lang
-import sys
-
 def unicodeToAscii(s):
     return ''.join(
         c for c in unicodedata.normalize('NFD', s)
@@ -26,9 +23,5 @@ def normalizeString(s):
     s = re.sub(r"([.!?])", r"\1", s)
     s = re.sub(r"[^a-zA-Z.!?]+", r"", s)
     return s
-
-def read_files(reversed=False):
-
-
 
 
